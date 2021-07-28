@@ -9,8 +9,8 @@ from datetime import datetime
 
 
 def main():
-    cwd = os.getcwd(__file__)
-    print(cwd.listdir())
+    cwd = os.getcwd()
+    print(cwd)
 
     print(os.stat('fun_os_module.py').st_mtime)
     # covert to human-readable format
