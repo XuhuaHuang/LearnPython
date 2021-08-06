@@ -2,7 +2,7 @@
 # simple example of fixture in pytest
 # Author: Xuhua Huang
 #
-# Last updated: July 16, 2021
+# Last updated: Aug 5, 2021
 # Created on: July 16, 2021
 #
 
@@ -77,7 +77,33 @@ def test_fruit_salad(fruit_bowl):
     assert all(fruit.cubed for fruit in fruit_salad.fruit)
 
 
+""" 
+Updates written on Aug 5, 2021 
+Making a fixture autouse fixture by passing `autouse=True` 
 """
-TODO: Autouse fixtures (fixtures you don’t have to request)
-https://docs.pytest.org/en/6.2.x/fixture.html#autouse-fixtures-fixtures-you-don-t-have-to-request
-"""
+
+
+@pytest.fixture
+def first_entry() -> str:
+    return 'a'
+
+
+@pytest.fixture
+def order(first_entry) -> list[typing.Any]:
+    return []
+
+
+@pytest.fixture(autouse=True)
+def append_first(order, first_entry) -> None:
+    return order.append(first_entry)  # if first_entry is not None else order.append('')
+
+
+@pytest.fixture(autouse=True)
+def test_string_only(order, first_entry):
+    assert order == [first_entry]
+
+
+@pytest.fixture(autouse=True)
+def test_string_and_int(order, first_entry):
+    order.append(int(2))
+    assert order == [first_entry, 2]
