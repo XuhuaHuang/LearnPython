@@ -17,9 +17,8 @@ ssh_connection: dict = {
     'crt_file_path': 'PATH/TO/KEY',  # default location: /Users//%USERNAME/.ssh/id_rsa
     'crt_password': ''
 }
-
-
 # ----------------------------------------------------------------------------------------------------------------------
+
 
 class SSHConnection:
     def __init__(self) -> None:
