@@ -38,7 +38,7 @@ def main():
     my_sql: SQLConnection = SQLConnection(schemas_name='DEFAULT')
     _aws_conn = my_sql.get_sql_connection()
     _aws_cursor = _aws_conn.cursor()
-    _aws_cursor.execute('SELECT * FROM `DEFAULT`.TL_measures ORDER BY creation_date_utc desc limit 100;')
+    _aws_cursor.execute('SELECT * FROM `SCHEMAS_NAME`.TL_measures ORDER BY creation_date_utc desc limit 100;')
     print(_aws_cursor.fetchall())
 
 
