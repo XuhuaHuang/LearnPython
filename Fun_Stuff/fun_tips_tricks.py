@@ -42,7 +42,7 @@ This line is affected and concatenated to the line above.''')
 
 # reverse a list/string with slicing
 important_data = [1, 2, 3, 4, 5]
-print(important_data[::-1])  # important_data[0:0 :-1] from start to end, starting from the right hand side
+print(important_data[::-1])  # important_data[0:0:-1] from start to end, starting from the right hand side
 # upper line does not modify the original data
 important_data.reverse()
 print(important_data)
@@ -56,7 +56,9 @@ if "E" in "IDEA Editor":
 "IDEA Editor".find("Non existing")
 
 # get address with id() method
-data_dict = {"Xuhua Huang": 20}
+data_dict = {
+    "Xuhua Huang": 20
+}
 print(id(data_dict))
 
 # aliases
@@ -64,6 +66,8 @@ print(id(data_dict))
 another_dict = data_dict
 print("Original data id: " + str(id(data_dict)))  # call str() method to concatenate
 print("Alias data id: " + str(id(another_dict)))
+# another_dict is data_dict = True
+# print(f"{another_dict is data_dict = }")
 
 another_dict["API_User"] = 25
 print("Modified alias data: " + another_dict.__str__())  # __str__() returns the string representation
@@ -71,11 +75,11 @@ print("Modified alias data id: " + str(id(another_dict)))
 
 
 # replace list v.s. replace list content
-def replace_list(data):
+def replace_list(data: list):
     data = ["new"]
 
 
-def replace_list_content(data):
+def replace_list_content(data: list):
     data[:] = ["new"]
 
 

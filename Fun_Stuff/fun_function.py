@@ -25,8 +25,6 @@ print(y(7))
 
 hypotenuse = lambda a, b: sqrt(a * a + b * b)
 print(hypotenuse(3, 4))
-
-
 # a = 3, b = 4, hypotenuse = 5
 
 # 2.1

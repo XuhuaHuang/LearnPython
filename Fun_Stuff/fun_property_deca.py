@@ -38,6 +38,7 @@ class Employee:
         self.salary *= raise_index
 
     ''' Add setter for class variable wage_raise_index '''
+
     @classmethod
     def set_wage_raise_index(cls, new_amount):
         if new_amount >= 0:
@@ -47,6 +48,7 @@ class Employee:
 
     ''' Use @classmethod decorator to write alternative constructor '''
     ''' Use case: 'Xuhua-Huang-60_000' initialization '''
+
     @classmethod
     def from_string(cls, emp_str):
         first_name, last_name, salary = emp_str.spilt('-')
@@ -59,8 +61,8 @@ class Employee:
         return True
 
 
-""" Test Cases for Employee class """
 def main():
+    """ Test Cases for Employee class """
     emp_xuhua = Employee('Xuhua', 'Huang', 60000)
     ''' Test constructor '''
     print(emp_xuhua.first_name)  # Xuhua
