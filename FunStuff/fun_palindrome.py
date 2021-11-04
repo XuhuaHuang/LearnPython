@@ -7,12 +7,12 @@
 # Created on: Oct 21, 2021
 
 # Return True if input is a palindrome using only alphanumeric characters
-# ignoring case and spaces
+# ignoring case and spaces; all characters are converted to lowercase
 def is_palindrome(s: str) -> bool:
     s_comp: str = ''.join(char for char in s if char.isalnum()).lower()
     # using generators to iterate through the string
     # identify alphanumeric characters and convert them to lower case
-    # append them to a newly constructed string and assign to s_comp
+    # append them to a newly constructed string and assign to s_comp (string to compare)
     return s_comp[::-1] == s_comp
 
 
