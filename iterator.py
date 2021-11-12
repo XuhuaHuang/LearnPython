@@ -23,6 +23,5 @@ def main():
     # print(next(iter_people)) #StopIteration
 
 
-
 if __name__ == '__main__':
     main()
