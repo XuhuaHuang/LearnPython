@@ -8,6 +8,9 @@
 from graphics import *
 
 
+"""
+Function to convert a celsius temperature value to fahrenheit
+"""
 def convert_temp(input):
     celsius = eval(input.getText())
     fahrenheit = 9.0 / 5.0 * celsius + 32
