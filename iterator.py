@@ -9,7 +9,7 @@
 def main():
     int_list: list[int] = [0, 1, 2, 3, 4, 5]
     for i in int_list:
-        print(i);
+        print(i)
 
     # define a list of string and obtain the iterator
     people: list[str] = ['Andy', 'Andrew', 'Liam']
@@ -25,3 +25,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
