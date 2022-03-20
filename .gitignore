@@ -6,6 +6,7 @@
 .idea/
 .ipynb_checkpoints/
 .vscode/
+*.code-workspace
 
 # Cython related files
 *.pyd
