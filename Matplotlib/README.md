@@ -50,8 +50,19 @@ import numpy as np
 randnum = np.random.randn(10000)
 plt.hist(randnum, 100)
 plt.title(r'Normal distribution with $\mu=0, \sigma=1$')
-plt.savefig('matplotlib_histogram.png)
+plt.savefig('matplotlib_histogram.png')
 plt.show()
 ```
 
 ---
+
+### Basic Visualization Tools
+**Learning Objectives**
+* Area plots
+* Histograms
+    * A way of representing the frequency distribution of a variable
+    * `data_frame["Column_Name"].plot(kind='hist')`
+* Bar charts
+    * Length of each bar is proportiinal to the value of the item it represents
+    * Commonly used to compare the values of a variable at a given point in time
+    * `data_frame.loc(["Column_Name"], row).plot(kind='bar')`
