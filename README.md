@@ -8,3 +8,20 @@ def abstractmethod(f):
     f.__isabstract__ = True
     return f
 ```
+
+## Function parameters `args` and `kwargs`
+```Python
+def func_args(arg1=None, arg2=None, arg3=None):
+	print(arg1, arg2, arg3)
+
+
+def func_kwargs(arg1=None, arg2=None, arg3=None):
+	print(arg1, arg2, arg3)
+
+
+args_list = [1, 2, 3]
+kwargs_dict = {"arg2": 2, "arg1": 1, "arg3": 3}
+
+func_args(*args_list)
+func_kwargs(**kwargs_dict)
+```
