@@ -25,3 +25,12 @@ kwargs_dict = {"arg2": 2, "arg1": 1, "arg3": 3}
 func_args(*args_list)
 func_kwargs(**kwargs_dict)
 ```
+
+## Working with Parametrized `pytest`
+```Python
+import pytest
+
+@pytest.mark.parametrize("item", ["No", "1", "10", "33", "Yes"])
+def test_string_is_digit(item):
+    assert item.isdigit()
+```
