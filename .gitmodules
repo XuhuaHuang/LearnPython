@@ -1,0 +1,3 @@
+[submodule "LearnPandas"]
+	path = LearnPandas
+	url = https://github.com/XuhuaHuang/LearnPandas.git
