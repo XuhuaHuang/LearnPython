@@ -1,3 +1,6 @@
 [submodule "LearnPandas"]
 	path = LearnPandas
 	url = https://github.com/XuhuaHuang/LearnPandas.git
+[submodule "COVID19-Analysis-Project"]
+	path = COVID19-Analysis-Project
+	url = https://github.com/XuhuaHuang/COVID19-Analysis-Project.git
