@@ -13,4 +13,3 @@ as a linker symbol that can be ued by another C file
 cdef public int say_hello_from_python() except -1:
     print(TEXT_TO_SAY)
     return 0
-

@@ -14,7 +14,7 @@ class MathFunction(object):
 
     def __call__(self, *operands):
         return self.operator(*operands)
-    
+
 '''
 Normal Python classes can herite from cdef classes, not the other way around
 Cython is restricted to single inheritance

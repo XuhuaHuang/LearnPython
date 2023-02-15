@@ -11,7 +11,7 @@ print(PY_VERSION_HEX >= 0x030200F0)
 
 
 '''
-atio() function is defined in stdlib.h
+atoi() function is defined in stdlib.h
 standard cimportfiles in Cython's source package Cython/Includes/
 also stored in .pxd files
 '''
