@@ -13,7 +13,7 @@
 from matplotlib import pyplot as plt
 
 
-def main() -> None:
+def main():
     """ Play around the pie chart with some meaningless data. """
     # slices: list[int] = [120, 80, 30, 20]
     # labels: list[str] = ['Sixty', 'Forty', 'Fifteen', 'Ten']
@@ -39,10 +39,6 @@ def main() -> None:
     plt.tight_layout()
     plt.show()
 
-    return
-
 
 if __name__ == '__main__':
     main()
-
-# %%

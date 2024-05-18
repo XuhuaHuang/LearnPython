@@ -20,10 +20,10 @@ from matplotlib import pyplot as plt  # following conventional naming
 """
 
 
-def main() -> None:
+def main():
     """ Open data.csv file and read from it with context manager
     Replaced later on with pandas.read_csv() approach """
-    # with open('data.csv', mode='r', encoding='utf-8') as data_csv_file:
+    # with open('data/data.csv', mode='r', encoding='utf-8') as data_csv_file:
     #     csv_reader = csv.DictReader(data_csv_file)
     #     language_counter = Counter()
     #     # loop over the dictionary and count the occurrence of items
@@ -32,7 +32,7 @@ def main() -> None:
 
     """ Read provided CSv file with pandas """
     language_counter = Counter()
-    data = pd.read_csv('data.csv')
+    data = pd.read_csv('data/data.csv')
     ids: list[str] = data['Responder_id']
     lang_responses: list[str] = data['LanguagesWorkedWith']
     # loop over the dictionary and count the occurrence of items
@@ -69,10 +69,6 @@ def main() -> None:
     plt.style.use('default')
     plt.show()
 
-    return
-
 
 if __name__ == '__main__':
     main()
-
-# %%

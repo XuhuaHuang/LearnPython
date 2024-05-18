@@ -11,8 +11,10 @@ from matplotlib import pyplot as plt
 
 
 # noinspection PyTypeChecker
-def main() -> None:
-    csv_data = pd.read_csv('data_05.csv')
+def main():
+    """ Read data from a CSV file and plot the data with fills."""
+
+    csv_data = pd.read_csv('./data/data_plot_fills.csv.csv')
     ages = csv_data['Age']
     dev_salaries = csv_data['All_Devs']
     py_salaries = csv_data['Python']
@@ -52,10 +54,6 @@ def main() -> None:
     plt.tight_layout()
     plt.show()
 
-    return
-
 
 if __name__ == '__main__':
     main()
-
-# %%

@@ -15,8 +15,8 @@
 from matplotlib import pyplot as plt
 
 
-def main() -> None:
-
+def main():
+    """ Plot a stack plot with matplotlib."""
     # x and y axis data
     minutes_into_game: list[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     player_1_scores: list[int] = [1, 2, 3, 3, 4, 4, 4, 4, 5]
@@ -42,10 +42,6 @@ def main() -> None:
     plt.tight_layout()
     plt.show()
 
-    return
-
 
 if __name__ == '__main__':
     main()
-
-# %%
