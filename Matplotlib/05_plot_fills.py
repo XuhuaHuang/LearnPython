@@ -1,16 +1,17 @@
 # Topic: Filling area with linear plots
-# File: 05_plot_fills.py
-#
+# File: plot_fills.py
 # Author: Xuhua Huang
 # Last updated: Aug 22, 2021
 # Created on: Aug 22, 2021
 
+
+# %%
 import pandas as pd
 from matplotlib import pyplot as plt
 
 
 # noinspection PyTypeChecker
-def main():
+def main() -> None:
     csv_data = pd.read_csv('data_05.csv')
     ages = csv_data['Age']
     dev_salaries = csv_data['All_Devs']
@@ -47,10 +48,14 @@ def main():
     plt.title('Median Salary (USD) by Age')
     plt.xlabel('Ages')
     plt.ylabel('Median Salary (USD)')
-    plt.style.use('seaborn-dark')
+    plt.style.use('default')
     plt.tight_layout()
     plt.show()
+
+    return
 
 
 if __name__ == '__main__':
     main()
+
+# %%

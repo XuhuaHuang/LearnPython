@@ -1,5 +1,5 @@
 # Topic: Work with pie charts
-# File: 03_pie_charts.py
+# File: pie_charts.py
 # reading data from CSV files and plot them into a pie chart
 # Author: Xuhua Huang
 #
@@ -9,10 +9,11 @@
 # Last updated: Aug 17, 2021
 # Created on: Aug 17, 2021
 
+# %%
 from matplotlib import pyplot as plt
 
 
-def main():
+def main() -> None:
     """ Play around the pie chart with some meaningless data. """
     # slices: list[int] = [120, 80, 30, 20]
     # labels: list[str] = ['Sixty', 'Forty', 'Fifteen', 'Ten']
@@ -34,10 +35,14 @@ def main():
             startangle=90, autopct='%1.1f%%', shadow=True, wedgeprops={'edgecolor': 'black'})
 
     plt.title('Top 5 Most Popular Programming Languages in 2019')
-    plt.style.use('seaborn-dark')
+    plt.style.use('default')
     plt.tight_layout()
     plt.show()
+
+    return
 
 
 if __name__ == '__main__':
     main()
+
+# %%

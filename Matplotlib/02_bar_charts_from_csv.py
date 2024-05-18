@@ -1,8 +1,8 @@
 # Topic: Work with bar charts
-# File: 02_bar_charts_from_csv.py
+# File: bar_charts_from_csv.py
 # reading data from CSV files and plot them
 # Author: Xuhua Huang
-# 
+#
 # Highlights:
 # 1) matplotlib.pyplot.barh method to create horizontal bar charts
 # 2) pandas.read_csv() to open a CSV file and access the rows/columns as a list
@@ -10,14 +10,17 @@
 # Last updated: Aug 15, 2021
 # Created on: Aug 15, 2021
 
-from matplotlib import pyplot as plt  # following conventional naming
-import numpy as np
+# %%
 import pandas as pd
-import csv
+
 from collections import Counter
+from matplotlib import pyplot as plt  # following conventional naming
+
+"""Create bar charts from data read from a CSV file.
+"""
 
 
-def main():
+def main() -> None:
     """ Open data.csv file and read from it with context manager
     Replaced later on with pandas.read_csv() approach """
     # with open('data.csv', mode='r', encoding='utf-8') as data_csv_file:
@@ -36,7 +39,8 @@ def main():
     for response in lang_responses:
         language_counter.update(response.split(';'))
 
-    print("Printing the most commonly used languages in tuple form:\n", language_counter.most_common(15))
+    print("Printing the most commonly used languages in tuple form:\n",
+          language_counter.most_common(15))
 
     """ Create lists as place holders to append data to plot later. """
     languages: list[str] = []
@@ -62,9 +66,13 @@ def main():
     # adjust some visual representation details for chart
     plt.grid(True)
     plt.tight_layout()
-    plt.style.use('seaborn-dark')
+    plt.style.use('default')
     plt.show()
+
+    return
 
 
 if __name__ == '__main__':
     main()
+
+# %%
