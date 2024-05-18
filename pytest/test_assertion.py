@@ -4,7 +4,7 @@
 #
 # Last updated: July 14, 2021
 # Created on: July 14, 2021
-#
+
 
 import pytest
 import unittest
@@ -25,16 +25,6 @@ def test_assert_msg():
     assert simple_fn() == 3, "The assertion is true, the function returns value 3"
 
 
-"""
-================================================= test session starts =================================================
-platform win32 -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
-rootdir: D:\GitHub\EmbeddedProgramming\Fun\Python\pytest
-collected 1 item
-
-test_03_assertion.py .                                                                                           [100%]
-
-================================================== 1 passed in 0.06s ==================================================
-"""
 # Assertion with expected exceptions
 def test_zerp_divisiob_err():
     with pytest.raises(ZeroDivisionError):
@@ -43,7 +33,8 @@ def test_zerp_divisiob_err():
 
 # ExceptionInfo.type, .value, and .traceback
 def test_recursion_depth():
-    with pytest.raises(RuntimeError) as excinfo:  # using pytest.raises() as context manager
+    # using pytest.raises() as context manager
+    with pytest.raises(RuntimeError) as excinfo:
         # nobody should ever write this
         # for demonstration purpose only
         def recur():

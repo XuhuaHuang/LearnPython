@@ -4,7 +4,6 @@
 #
 # Last updated: July 8, 2021
 # Created on: July 8, 2021
-#
 
 import pytest
 

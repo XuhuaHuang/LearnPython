@@ -4,7 +4,7 @@
 #
 # Last updated: Aug 5, 2021
 # Created on: July 16, 2021
-#
+
 
 """
 Think of a test is being broken down into 4 steps
@@ -95,7 +95,8 @@ def order(first_entry) -> list[typing.Any]:
 
 @pytest.fixture(autouse=True)
 def append_first(order, first_entry) -> None:
-    return order.append(first_entry)  # if first_entry is not None else order.append('')
+    # if first_entry is not None else order.append('')
+    return order.append(first_entry)
 
 
 @pytest.fixture(autouse=True)
