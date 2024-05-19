@@ -1,5 +1,5 @@
 # Topic: Work with bar charts
-# File: bar_charts_from_csv.py
+# File: bar_charts.py
 # reading data from CSV files and plot them
 # Author: Xuhua Huang
 #

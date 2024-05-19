@@ -7,7 +7,7 @@
 # Created on: Sept 27, 2021
 
 class Singleton:
-    _instance = None;
+    _instance = None
 
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
@@ -18,8 +18,8 @@ class Singleton:
 def singleton_example():
     print("Singleton Example")
     x = Singleton()
-    y = Singleton() # obtain 2 identical instance
-    print(f"{x is y = }")
+    y = Singleton()  # obtain 2 identical instance
+    print(f"{x is y=}")
     return
 
 
@@ -55,7 +55,7 @@ def main():
     # Demonstration of class Client
     x = Client(0)
     y = Client(0)
-    print(f"{x is y = }")
+    print(f"{x is y=}")
     z = Client(1)
 
 
