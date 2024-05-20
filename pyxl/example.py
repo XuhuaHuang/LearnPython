@@ -1,8 +1,8 @@
 import openpyxl as xl
 from openpyxl.chart import BarChart, Reference
 
-def process_work_book(filename, sheetname):
-    work_book = xl.load_workbook(filename)
+def process_work_book(filename: str, sheetname: str):
+    work_book: xl.workbook.Workbook = xl.load_workbook(filename)
     sheet = work_book[sheetname]
     # code block for customized functionality
     # for row in range(2, sheet.max_row + 1):
@@ -37,4 +37,4 @@ chart = BarChart()
 chart.add_data(values)
 sheet.add_chart(chart, 'e2')
 
-work_book.save("transactions_v2.xlsx")
+work_book.save("transactions.xlsx")

@@ -1,0 +1,4 @@
+transaction_id,product_id,price
+1001,1,5.95
+1002,2,6.95
+1003,3,7.95
